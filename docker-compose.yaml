@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: shypple_exercise
+      POSTGRES_PASSWORD: db-password
+      POSTGRES_DB: shypple_exercise_development
+    secrets:
+      - db-password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./bin/rails server -b 0.0.0.0 -e development
+    volumes:
+      - .:/rails
+      - ./config/ssl:/rails/config/ssl
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    secrets:
+      - db-password
+    depends_on:
+      - db
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgres://shypple_exercise:db-password@db:5432/shypple_exercise_development
+      SSL_CERT_PATH: /rails/config/ssl/localhost.crt
+      SSL_KEY_PATH: /rails/config/ssl/localhost.key
+
+volumes:
+  db_data:
+secrets:
+  db-password:
+    file: db/password.txt

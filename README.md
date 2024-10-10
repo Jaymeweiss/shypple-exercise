@@ -3,22 +3,12 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## Setup
+This app is confugured to be used with Docker using Docker Compose. To run the app, you need to have Docker installed on your machine.
 
-* Ruby version
+To start the app, run the following command in the root directory of the app:
 
-* System dependencies
+```
+docker-compose up
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

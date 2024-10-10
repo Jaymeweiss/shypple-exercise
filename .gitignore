@@ -31,5 +31,14 @@
 
 /public/assets
 
+# Ignore Jetbrains specific files
+.idea/
+
+# Ignore dev database password
+/db/password.txt
+
+# Ignore localhost ssl certificates
+/config/ssl/*
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
