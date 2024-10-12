@@ -10,4 +10,7 @@ if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
   ./bin/rails db:prepare
 fi
 
+# Run the database population task
+bundle exec rake db:populate
+
 exec "${@}"
