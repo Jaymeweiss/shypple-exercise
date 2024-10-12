@@ -1,0 +1,5 @@
+class AddUniqueIndexToSailingCodeRates < ActiveRecord::Migration[7.2]
+  def change
+    add_index :rates, :sailing_code, unique: true
+  end
+end
