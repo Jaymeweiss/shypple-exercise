@@ -1,10 +1,13 @@
 services:
   db:
     image: postgres:17
+    restart: unless-stopped
     environment:
       POSTGRES_USER: shypple_exercise
       POSTGRES_PASSWORD: db-password
       POSTGRES_DB: shypple_exercise_development
+    ports:
+      - "5432:5432"
     secrets:
       - db-password
     volumes:
