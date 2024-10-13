@@ -25,4 +25,23 @@ class Route
     # Using the assumption that we are working with whole dates and not DateTime. We can use DateTime here as well - we will just be comparing seconds to seconds instead
     @duration ||= stops.last.arrival_date - @stops.first.departure_date
   end
+
+  def printable_route
+    stops.map { |stop| stop_hash(stop) }
+  end
+
+  private
+
+  def stop_hash(stop)
+    rate = Rate.find_by(sailing_code: stop.sailing_code)
+    {
+      "origin_port": stop.origin_port,
+      "destination_port": stop.destination_port,
+      "departure_date": stop.departure_date.strftime("%Y-%m-%d"),
+      "arrival_date": stop.arrival_date.strftime("%Y-%m-%d"),
+      "sailing_code": stop.sailing_code,
+      "rate": rate.rate,
+      "rate_currency": rate.rate_currency
+    }
+  end
 end

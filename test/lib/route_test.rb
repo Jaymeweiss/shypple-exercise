@@ -46,4 +46,34 @@ class RouteTest < ActiveSupport::TestCase
 
     assert_in_delta 1152.89, route.price_in_euro, 0.01
   end
+
+  test "should print the route in a readable format" do
+    route = Route.new([
+                        shipping_options(:cnsha_nlrtm_2022_01_29),
+                        shipping_options(:esbcn_nlrtm_2022_02_16)
+                      ])
+
+    expected_output = [
+      {
+        "origin_port": "CNSHA",
+        "destination_port": "NLRTM",
+        "departure_date": "2022-01-29",
+        "arrival_date": "2022-02-15",
+        "sailing_code": "QRST",
+        "rate": 761.96,
+        "rate_currency": "EUR"
+      },
+      {
+        "origin_port": "ESBCN",
+        "destination_port": "NLRTM",
+        "departure_date": "2022-02-16",
+        "arrival_date": "2022-02-20",
+        "sailing_code": "ETRG",
+        "rate": 69.96,
+        "rate_currency": "USD"
+      }
+    ]
+
+    assert_equal expected_output, route.printable_route
+  end
 end
