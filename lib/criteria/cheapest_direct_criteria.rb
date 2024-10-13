@@ -7,6 +7,8 @@ module Criteria
       sorted_routes.select { |route| route.price_in_euro == cheapest_price }
     end
 
+    private
+
     def all_possible_routes
       # find all the possible starting points to search for routes from
       origin_options = ShippingOption.where(origin_port: @origin_port, destination_port: @destination_port)
