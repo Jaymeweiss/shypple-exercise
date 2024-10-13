@@ -35,11 +35,13 @@ namespace :db do
       end
 
       data["exchange_rates"].each do |date, rates|
-        ExchangeRate.find_or_create_by!(
-          date: date,
-          usd: rates["usd"],
-          jpy: rates["jpy"]
-        )
+        rates.each do |currency, rate|
+          ExchangeRate.find_or_create_by!(
+            date: date,
+            currency: currency.upcase,
+            rate: rate
+          )
+        end
       end
     end
   end
