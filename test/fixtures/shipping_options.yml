@@ -9,7 +9,7 @@ cnsha_nlrtm_2022_02_01:
 
 cnsha_esbcn_2022_03_01:
   origin_port: CNSHA
-  destination_port: ESBCN
+  destination_port: NLRTM
   departure_date: 2022-03-01
   arrival_date: 2022-03-12
   sailing_code: EFGH
