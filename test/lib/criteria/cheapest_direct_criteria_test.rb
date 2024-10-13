@@ -12,7 +12,7 @@ class CheapestDirectCriteriaTest < ActiveSupport::TestCase
   end
 
   test "should return nothing if there no possible routes" do
-    criteria = Criteria::CheapestCriteria.new("NLRTM", "BRSSZ")
+    criteria = Criteria::CheapestDirectCriteria.new("NLRTM", "BRSSZ")
     routes = criteria.matching_routes
     assert_equal 0, routes.count
   end
