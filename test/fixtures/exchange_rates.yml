@@ -1,0 +1,71 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+usd_2022_01_29:
+  date: 2022-01-29
+  currency: usd
+  usd: 1.1138
+
+usd_2022_01_30:
+  date: 2022-01-30
+  currency: usd
+  usd: 1.1138
+
+jpy_2022_01_29:
+  date: 2022-01-29
+  currency: jpy
+  rate: 130.85
+
+jpy_2022_01_30:
+  date: 2022-01-30
+  currency: jpy
+  rate: 132.97
+
+jpy_2022_01_31:
+  date: 2022-01-31
+  currency: jpy
+  rate: 131.2
+
+usd_2022_01_31:
+  date: 2022-01-31
+  currency: usd
+  usd: 1.1156
+
+usd_2022_02_01:
+  date: 2022-02-01
+  currency: usd
+  usd: 1.126
+
+jpy_2022_02_01:
+  date: 2022-02-01
+  currency: jpy
+  rate: 130.15
+
+usd_2022_02_02:
+  date: 2022-02-02
+  currency: usd
+  usd: 1.1323
+
+jpy_2022_02_02:
+  date: 2022-02-02
+  currency: jpy
+  rate: 133.91
+
+usd_2022_02_15:
+  date: 2022-02-15
+  currency: usd
+  usd: 1.1483
+
+jpy_2022_02_15:
+  date: 2022-02-15
+  currency: jpy
+  rate: 149.93
+
+usd_2022_02_16:
+  date: 2022-02-16
+  currency: usd
+  usd: 1.1482
+
+jpy_2022_02_16:
+  date: 2022-02-16
+  currency: jpy
+  rate: 149.93

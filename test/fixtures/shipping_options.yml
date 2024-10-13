@@ -1,0 +1,64 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+cnsha_nlrtm_2022_02_01:
+  origin_port: CNSHA
+  destination_port: NLRTM
+  departure_date: 2022-02-01
+  arrival_date: 2022-03-01
+  sailing_code: ABCD
+
+cnsha_esbcn_2022_03_01:
+  origin_port: CNSHA
+  destination_port: ESBCN
+  departure_date: 2022-03-01
+  arrival_date: 2022-03-12
+  sailing_code: EFGH
+
+cnsha_nlrtm_2022_01_31:
+  origin_port: CNSHA
+  destination_port: NLRTM
+  departure_date: 2022-01-31
+  arrival_date: 2022-02-28
+  sailing_code: IJKL
+
+cnsha_nlrtm_2022_01_30:
+  origin_port: CNSHA
+  destination_port: NLRTM
+  departure_date: 2022-01-30
+  arrival_date: 2022-03-05
+  sailing_code: MNOP
+
+cnsha_nlrtm_2022_01_29:
+  origin_port: CNSHA
+  destination_port: NLRTM
+  departure_date: 2022-01-29
+  arrival_date: 2022-02-15
+  sailing_code: QRST
+
+cnsha_esbcn_2022_01_29:
+  origin_port: CNSHA
+  destination_port: ESBCN
+  departure_date: 2022-01-29
+  arrival_date: 2022-02-12
+  sailing_code: ERXQ
+
+esbcn_nlrtm_2022_02_15:
+  origin_port: ESBCN
+  destination_port: NLRTM
+  departure_date: 2022-02-15
+  arrival_date: 2022-03-29
+  sailing_code: ETRF
+
+esbcn_nlrtm_2022_02_16:
+  origin_port: ESBCN
+  destination_port: NLRTM
+  departure_date: 2022-02-16
+  arrival_date: 2022-02-20
+  sailing_code: ETRG
+
+esbcn_brssz_2022_02_16:
+  origin_port: ESBCN
+  destination_port: BRSSZ
+  departure_date: 2022-02-16
+  arrival_date: 2022-03-14
+  sailing_code: ETRB
