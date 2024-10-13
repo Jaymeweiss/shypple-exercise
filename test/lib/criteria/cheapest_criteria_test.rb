@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CriteriaTest < ActiveSupport::TestCase
+class CheapestCriteriaTest < ActiveSupport::TestCase
   fixtures :shipping_options, :exchange_rates, :rates
 
   test "should return the cheapest route if there is only 1 with the matching criteria" do
