@@ -3,7 +3,7 @@ require "test_helper"
 class CheapestDirectCriteriaTest < ActiveSupport::TestCase
   fixtures :shipping_options, :exchange_rates, :rates
 
-  test "should return the cheapest route if there is only 1 with the matching criteria" do
+  test "should return the cheapest direct route if there is only 1 with the matching criteria" do
     criteria = Criteria::CheapestDirectCriteria.new("CNSHA", "NLRTM")
     routes = criteria.matching_routes
     assert_equal 1, routes.size
