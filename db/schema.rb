@@ -16,11 +16,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_12_201110) do
 
   create_table "exchange_rates", force: :cascade do |t|
     t.date "date"
-    t.float "usd"
-    t.float "jpy"
+    t.string "currency"
+    t.float "rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["date"], name: "index_exchange_rates_on_date", unique: true
+    t.index ["date", "currency"], name: "index_exchange_rates_on_date", unique: true
   end
 
   create_table "rates", force: :cascade do |t|
