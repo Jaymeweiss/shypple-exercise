@@ -31,8 +31,24 @@ loop do
   end
 
   should_close && break
-  result = ""
+
+  klass = case input_hash[:criteria]
+          when "cheapest-direct"
+            Criteria::CheapestDirectCriteria
+          when "cheapest"
+            Criteria::CheapestCriteria
+          when "fastest"
+            Criteria::FastestCriteria
+          else
+            nil
+          end
+  routes = klass&.new(input_hash[:origin_port], input_hash[:destination_port])&.matching_routes || []
+
   puts "The #{input_hash[:criteria]} route between #{input_hash[:origin_port]} and #{input_hash[:destination_port]}: "
-  puts result
+  puts "No routes found" if routes.empty?
+  routes_json = routes.map do |route|
+    route.printable_route
+  end.to_json
+  puts routes_json
   puts "-----------------------------------"
 end
